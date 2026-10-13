@@ -1,0 +1,184 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f6fb;
+  color: #263247;
+  line-height: 1.6;
+}
+
+.header {
+  background: #183b70;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.header h1 {
+  margin-bottom: 5px;
+}
+
+.container {
+  max-width: 1100px;
+  width: 92%;
+  margin: 30px auto;
+}
+
+.stats {
+  margin-bottom: 22px;
+}
+
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 5px solid #3678df;
+  box-shadow: 0 3px 12px #0000000d;
+}
+
+.stat-card h3 {
+  color: #65738a;
+  font-size: 16px;
+}
+
+.stat-card p {
+  font-size: 32px;
+  font-weight: bold;
+  color: #183b70;
+}
+
+.panel {
+  background: white;
+  padding: 24px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #0000000d;
+}
+
+.panel h2 {
+  margin-bottom: 18px;
+  font-size: 21px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d5dce7;
+  border-radius: 7px;
+  font-size: 14px;
+  background: white;
+  color: #263247;
+}
+
+input:focus, select:focus {
+  outline: 2px solid #a8c8ff;
+  border-color: #3678df;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+button {
+  background: #2463c5;
+  color: white;
+  border: none;
+  padding: 11px 17px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #174b9d;
+}
+
+.secondary {
+  background: #64748b;
+}
+
+.delete-btn {
+  background: #dc3545;
+  margin-left: 5px;
+}
+
+.delete-btn:hover {
+  background: #b02a37;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  padding: 13px 10px;
+  border-bottom: 1px solid #e8edf4;
+  white-space: nowrap;
+}
+
+th {
+  background: #edf3fc;
+  color: #183b70;
+}
+
+tbody tr:hover {
+  background: #f7f9fd;
+}
+
+#emptyMessage {
+  text-align: center;
+  padding: 20px 0;
+  color: #758198;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #758198;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .form-grid, .filters {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    padding: 16px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>Student Management System</h1>
+    <p>Manage your student records easily</p>
+  </header>
+
+  <main class="container">
+    <section class="stats">
+      <div class="stat-card">
+        <h3>Total Students</h3>
+        <p id="totalStudents">0</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 id="formTitle">Add New Student</h2>
+
+      <form id="studentForm">
+        <input type="hidden" id="studentId">
+
+        <div class="form-grid">
+          <input type="text" id="name" placeholder="Student Name" required>
+          <input type="text" id="roll" placeholder="Roll Number" required>
+
+          <input type="email" id="email" placeholder="Email Address" required>
+
+          <select id="course" required>
+            <option value="">Select Course</option>
+            <option value="B.Tech CSE">B.Tech CSE</option>
+            <option value="B.Tech IT">B.Tech IT</option>
+            <option value="BCA">BCA</option>
+            <option value="MCA">MCA</option>
+            <option value="Diploma">Diploma</option>
+          </select>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" id="submitBtn">Add Student</button>
+          <button type="button" id="cancelBtn" class="secondary hidden">
+            Cancel Edit
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Student Records</h2>
+
+      <div class="filters">
+        <input type="search" id="searchInput"
+          placeholder="Search by name, roll or email...">
+
+        <select id="courseFilter">
+          <option value="">All Courses</option>
+          <option value="B.Tech CSE">B.Tech CSE</option>
+          <option value="B.Tech IT">B.Tech IT</option>
+          <option value="BCA">BCA</option>
+          <option value="MCA">MCA</option>
+          <option value="Diploma">Diploma</option>
+        </select>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Roll No.</th>
+              <th>Email</th>
+              <th>Course</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="studentTable"></tbody>
+        </table>
+      </div>
+
+      <p id="emptyMessage">No students found. Add your first student!</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Student Management Dashboard | Web Development Capstone</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
